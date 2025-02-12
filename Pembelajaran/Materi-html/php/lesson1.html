@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Basics - Lesson 1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../Materi-css/Materi.css">
+</head>
+<body class="bg-gray-100">
+    <div class="lesson-content">
+        <h1 class="lesson-title">Introduction to PHP</h1>
+        
+        <section>
+            <h2 class="text-xl font-bold mb-4">What is PHP?</h2>
+            <p class="mb-4">
+                PHP (Hypertext Preprocessor) is a server-side scripting language designed specifically for web development. It can be embedded directly into HTML code.
+            </p>
+
+            <div class="example">
+                <h3 class="font-bold mb-2">Basic PHP Syntax:</h3>
+                <pre><code>&lt;?php
+// Variables
+$name = "John";
+$age = 25;
+
+// Basic Function
+function sayHello($name) {
+    return "Hello, " . $name . "!";
+}
+
+// Array
+$colors = array("red", "green", "blue");
+
+// Associative Array
+$person = array(
+    "name" => "John",
+    "age" => 25,
+    "city" => "New York"
+);
+?&gt;</code></pre>
+            </div>
+        </section>
+
+        <section class="mt-8">
+            <h2 class="text-xl font-bold mb-4">Key Features</h2>
+            <ul class="list-disc pl-6">
+                <li>Server-side scripting</li>
+                <li>Database integration</li>
+                <li>Form handling</li>
+                <li>Session management</li>
+            </ul>
+        </section>
+
+        <div class="lesson-navigation">
+            <span></span>
+            <a href="lesson2.html" class="nav-button">Next Lesson →</a>
+        </div>
+    </div>
+
+    <script src="../../Materi-css/Materi.js"></script>
+</body>
+</html>

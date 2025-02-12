@@ -1,0 +1,18 @@
+/* Custom styles */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Animation for cards */
+.bg-white {
+    transition: transform 0.3s ease;
+}
+
+.bg-white:hover {
+    transform: translateY(-5px);
+}

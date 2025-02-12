@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySQL Database Basics - Lesson 1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../Materi-css/Materi.css">
+</head>
+<body class="bg-gray-100">
+    <div class="lesson-content">
+        <h1 class="lesson-title">Introduction to MySQL Database</h1>
+        
+        <section>
+            <h2 class="text-xl font-bold mb-4">What is MySQL?</h2>
+            <p class="mb-4">
+                MySQL is an open-source relational database management system. It's one of the most popular databases for web applications, known for its reliability, ease of use, and performance.
+            </p>
+
+            <div class="example">
+                <h3 class="font-bold mb-2">Basic MySQL Commands:</h3>
+                <pre><code>-- Create a new database
+CREATE DATABASE my_database;
+
+-- Create a table
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Insert data
+INSERT INTO users (username, email) 
+VALUES ('john_doe', 'john@example.com');</code></pre>
+            </div>
+        </section>
+
+        <section class="mt-8">
+            <h2 class="text-xl font-bold mb-4">Connecting to MySQL with PHP</h2>
+            <div class="example">
+                <pre><code>&lt;?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "my_database";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+?&gt;</code></pre>
+            </div>
+        </section>
+
+        <div class="lesson-navigation">
+            <span></span>
+            <a href="lesson2.html" class="nav-button">Next Lesson →</a>
+        </div>
+    </div>
+
+    <script src="../../Materi-css/Materi.js"></script>
+</body>
+</html>
