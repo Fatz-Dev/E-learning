@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         copyButton.style.right = '1rem';
         copyButton.style.top = '0.5rem';
         copyButton.style.padding = '0.25rem 0.5rem';
-        copyButton.style.background = '#2563eb';
+        copyButton.style.background = '#9A9B9E';
         copyButton.style.color = 'white';
         copyButton.style.border = 'none';
         copyButton.style.borderRadius = '4px';

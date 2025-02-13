@@ -5,336 +5,343 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dasar-dasar HTML - Modul 1</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../../Materi-css/Materi.css">
 </head>
 
 <body class="bg-gray-100">
-    <div class="lesson-content">
-        <h1 class="lesson-title">Dasar-dasar HTML</h1>
 
-        <section>
+    <h2 class="lesson-title font-extrabold text-center text-4xl">Dasar-dasar HTML</h2>
 
-            <h2 class="text-3xl font-semibold text-gray-800 mb-4">Tujuan Pembelajaran</h2>
-            <ul class="mb-4">
-                <li>1. Mahasiswa dapat mengenal dasar-dasar HTML</li>
-                <li>2. Mahasiswa dapat menguasai dasar-dasar HTML</li>
-                <li>3. Mahasiswa dapat mengenal dan memahami blok program HTML</li>
-                <li>4. Mahasiswa dapat memahami setiap objek sebagai dasar pembuatan interface pada halaman browser</li>
-                <li>5. Mahasiswa dapat membuat halaman web sederhana dengan HTML</li>
-            </ul>
-            <br>
+    <section>
 
-            <h2 class="text-3xl font-bold mb-4">Pengenalan HTML</h2>
-            <p class="mb-4">
-                HTML merupakan singkatan dari HyperText Markup Language, yaitu script untuk menyusun dokumen-dokumen
-                Web. Dokumen HTML disimpan dalam format teks reguler dan mengandung tag-tag yang memerintahkan web
-                browser untuk mengeksekusi perintah-perintah yang dispesifikasikan.
+        <h2 class="text-3xl font-semibold text-gray-800 mb-4">Tujuan Pembelajaran</h2>
+        <ul class="mb-4">
+            <li>1. Mahasiswa dapat mengenal dasar-dasar HTML</li>
+            <li>2. Mahasiswa dapat menguasai dasar-dasar HTML</li>
+            <li>3. Mahasiswa dapat mengenal dan memahami blok program HTML</li>
+            <li>4. Mahasiswa dapat memahami setiap objek sebagai dasar pembuatan interface pada halaman browser</li>
+            <li>5. Mahasiswa dapat membuat halaman web sederhana dengan HTML</li>
+        </ul>
+        <br>
+
+        <h2 class="text-3xl font-bold mb-4">Pengenalan HTML</h2>
+        <p class="mb-4">
+            HTML merupakan singkatan dari HyperText Markup Language, yaitu script untuk menyusun dokumen-dokumen
+            Web. Dokumen HTML disimpan dalam format teks reguler dan mengandung tag-tag yang memerintahkan web
+            browser untuk mengeksekusi perintah-perintah yang dispesifikasikan.
+        </p>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mb-4 pl-4">1. Penamaan Dokumen HTML</h3>
+        <p class="mb-6 pl-4">
+            Penamaan dokumen dapat dilakukan pada saat melakukan penyimpanan. Pada saat mengetikkan nama file, maka
+            file diberikan ekstensi .html, contoh: <code>namafile.html</code>.
+        </p>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mb-4 pl-4">2. Struktur Dokumen HTML</h3>
+        <p class="mb-6 pl-4">
+            Dokumen HTML mempunyai tiga buah tag utama yang membentuk struktur dari dokumen HTML, yaitu
+            <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, dan <code>&lt;body&gt;</code>. Tag
+            <code>&lt;html&gt;</code> berfungsi untuk menyatakan suatu dokumen HTML, tag <code>&lt;head&gt;</code>
+            berfungsi untuk memberikan informasi tentang dokumen HTML, dan tag <code>&lt;body&gt;</code> berfungsi
+            untuk menyimpan informasi atau data yang akan ditampilkan dalam dokumen HTML. Elemen yang terdapat pada
+            sebuah dokumen HTML terbagi atas dua bagian, yaitu Head dan Body.
+        </p>
+        <div class="pl-8">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">a. Bagian Head</h3>
+            <p class="text-gray-700 text-lg mb-6">
+                Bagian header dari dokumen HTML diapit dengan tag <code>&lt;head&gt;....&lt;/head&gt;</code>. Di
+                dalam bagian ini biasanya dimuat tag <code>&lt;title&gt;....&lt;/title&gt;</code> yang menampilkan
+                judul dari halaman pada browser.
+            </p>
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">b. Bagian Body</h3>
+            <p class="text-gray-700 text-lg mb-6">
+                Dokumen body diapit dengan tag <code>&lt;body&gt;....&lt;/body&gt;</code>. Bagian body digunakan
+                untuk menampilkan teks, gambar, link, dan semua elemen yang akan ditampilkan pada halaman web.
+            </p>
+        </div>
+
+        <div class="example bg-black p-4 rounded-lg relative">
+            <h3 class="font-bold mb-2 text-gray-100">Struktur Dasar HTML:</h3>
+            <pre><code id="code-example">&lt;!doctype html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Judul Dokumen HTML&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Heading Pertama&lt;/h1&gt;
+            &lt;p&gt;Ini adalah paragraf pertama.&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;</code></pre>
+        </div>
+    </section>
+
+    <section class="bg-gray-50 py-12 pl-8">
+
+        <h2 class="text-3xl font-semibold text-gray-800 mb-8">Penjelasan Tag HTML</h2>
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">&lt;!doctype html&gt;</h3>
+            <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                Adalah tag awal dari setiap dokumen HTML. Tag ini berfungsi untuk menginformasikan pada browser
+                bahwa dokumen yang sedang dibuka adalah dokumen HTML.
+            </p>
+        </div>
+
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">&lt;html&gt;......&lt;/html&gt;</h3>
+            <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                Tag ini menandai awal dari isi dokumen HTML. Semua kode HTML yang dibuat akan ditulis di dalam
+                tag ini.
+            </p>
+        </div>
+
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">&lt;head&gt;......&lt;/head&gt;</h3>
+            <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                Tag <code>&lt;head&gt;</code> digunakan untuk menyimpan informasi tentang dokumen HTML.
+                Informasi yang disimpan di sini tidak langsung ditampilkan di halaman web, namun penting untuk
+                pengaturan dokumen.
+            </p>
+        </div>
+
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">&lt;title&gt;.......&lt;/title&gt;</h3>
+            <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                Salah satu contoh informasi yang terdapat di dalam tag <code>&lt;head&gt;</code> adalah
+                <code>&lt;title&gt;</code>. Tag <code>&lt;title&gt;......&lt;/title&gt;</code> ini akan menampilkan teks pada judul
+                browser atau pada tab browser.
+            </p>
+        </div>
+
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">&lt;body&gt;......&lt;/body&gt;</h3>
+            <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                Tag <code>&lt;body&gt;</code> merupakan tag pembuka dari badan dokumen HTML. Semua konten yang
+                akan ditampilkan di halaman web, seperti teks, gambar, dan link, ditulis di dalam tag ini.
+            </p>
+        </div>
+    </section>
+
+    <section class="bg-gray-50 py-12">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-8">3. Elemen dan Tag Pada Dokumen HTML</h2>
+
+            <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                Ciri utama dokumen HTML adalah adanya tag dan elemen. Elemen dalam dokumen HTML dikategorikan
+                menjadi dua, yaitu elemen <code>&lt;head&gt;</code> yang berfungsi memberikan informasi tentang
+                dokumen tersebut dan elemen <code>&lt;body&gt;</code> yang menentukan bagaimana isi suatu dokumen
+                ditampilkan oleh browser, seperti paragraf, daftar (list), tabel, dan lain-lain.
             </p>
 
-            <h3 class="text-2xl font-semibold text-gray-800 mb-4">1. Penamaan Dokumen HTML</h3>
-            <p class="mb-6">
-                Penamaan dokumen dapat dilakukan pada saat melakukan penyimpanan. Pada saat mengetikkan nama file, maka
-                file diberikan ekstensi .html, contoh: <code>namafile.html</code>.
+            <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                Sedangkan tag dinyatakan dengan tanda lebih kecil "<code>&lt;</code>" (tag awal) dan tanda lebih
+                besar "<code>&gt;</code>" (tag akhir). Dalam penggunaannya, sebagian besar kode HTML tersebut harus
+                terletak di antara tag kontainer. Yaitu diawali dengan <code>&lt;namatag&gt;</code> dan diakhiri
+                dengan <code>&lt;/namatag&gt;</code> (terdapat tanda garis miring "/").
             </p>
 
-            <h3 class="text-2xl font-semibold text-gray-800 mb-4">2. Struktur Dokumen HTML</h3>
-            <p class="mb-6">
-                Dokumen HTML mempunyai tiga buah tag utama yang membentuk struktur dari dokumen HTML, yaitu
-                <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, dan <code>&lt;body&gt;</code>. Tag
-                <code>&lt;html&gt;</code> berfungsi untuk menyatakan suatu dokumen HTML, tag <code>&lt;head&gt;</code>
-                berfungsi untuk memberikan informasi tentang dokumen HTML, dan tag <code>&lt;body&gt;</code> berfungsi
-                untuk menyimpan informasi atau data yang akan ditampilkan dalam dokumen HTML. Elemen yang terdapat pada
-                sebuah dokumen HTML terbagi atas dua bagian, yaitu Head dan Body.
-            </p>
-            <div class="pl-6">
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">a. Bagian Head</h3>
-                <p class="text-gray-700 text-lg mb-6">
-                    Bagian header dari dokumen HTML diapit dengan tag <code>&lt;head&gt;....&lt;/head&gt;</code>. Di
-                    dalam bagian ini biasanya dimuat tag <code>&lt;title&gt;....&lt;/title&gt;</code> yang menampilkan
-                    judul dari halaman pada browser.
+            <div class="mt-8">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Bagian Head</h3>
+                <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                    Bagian <code>&lt;head&gt;</code> digunakan untuk menyimpan informasi tentang dokumen HTML.
+                    Elemen-elemen dalam bagian <code>&lt;head&gt;</code> tidak langsung ditampilkan pada halaman web
+                    tetapi memberikan informasi penting, seperti judul halaman, metadata, dan link ke sumber daya
+                    lain (misalnya CSS).
                 </p>
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">b. Bagian Body</h3>
-                <p class="text-gray-700 text-lg mb-6">
-                    Dokumen body diapit dengan tag <code>&lt;body&gt;....&lt;/body&gt;</code>. Bagian body digunakan
-                    untuk menampilkan teks, gambar, link, dan semua elemen yang akan ditampilkan pada halaman web.
+            </div>
+
+            <div class="mt-8">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Bagian Body</h3>
+                <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                    Bagian <code>&lt;body&gt;</code> adalah tempat semua konten yang akan ditampilkan pada halaman
+                    web berada, seperti teks, gambar, video, dan elemen lainnya. Semua elemen yang terlihat oleh
+                    pengguna web akan berada di dalam tag <code>&lt;body&gt;</code>.
                 </p>
             </div>
 
-            <div class="example bg-black p-4 rounded-lg">
-                <h3 class="font-bold mb-2 text-gray-100">Struktur Dasar HTML:</h3>
-                <pre><code>&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;Judul Dokumen HTML&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Heading Pertama&lt;/h1&gt;
-    &lt;p&gt;Ini adalah paragraf pertama.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-            </div>
-        </section>
-
-        <section class="bg-gray-50 py-12 pl-8">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">Penjelasan Tag HTML</h2>
-                <div class="mb-8">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">&lt;!doctype html&gt;</h3>
-                    <p class="text-gray-700 text-lg leading-relaxed mb-4">
-                        Adalah tag awal dari setiap dokumen HTML. Tag ini berfungsi untuk menginformasikan pada browser
-                        bahwa dokumen yang sedang dibuka adalah dokumen HTML.
-                    </p>
-                </div>
-
-                <div class="mb-8">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">&lt;html&gt;......&lt;/html&gt;</h3>
-                    <p class="text-gray-700 text-lg leading-relaxed mb-4">
-                        Tag ini menandai awal dari isi dokumen HTML. Semua kode HTML yang dibuat akan ditulis di dalam
-                        tag ini.
-                    </p>
-                </div>
-
-                <div class="mb-8">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">&lt;head&gt;......&lt;/head&gt;</h3>
-                    <p class="text-gray-700 text-lg leading-relaxed mb-4">
-                        Tag <code>&lt;head&gt;</code> digunakan untuk menyimpan informasi tentang dokumen HTML.
-                        Informasi yang disimpan di sini tidak langsung ditampilkan di halaman web, namun penting untuk
-                        pengaturan dokumen.
-                    </p>
-                </div>
-
-                <div class="mb-8">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">&lt;title&gt;.......</h3>
-                    <p class="text-gray-700 text-lg leading-relaxed mb-4">
-                        Salah satu contoh informasi yang terdapat di dalam tag <code>&lt;head&gt;</code> adalah
-                        <code>&lt;title&gt;</code>. Tag <code>&lt;title&gt;</code> ini akan menampilkan teks pada judul
-                        browser atau pada tab browser.
-                    </p>
-                </div>
-
-                <div class="mb-8">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">&lt;body&gt;......&lt;/body&gt;</h3>
-                    <p class="text-gray-700 text-lg leading-relaxed mb-4">
-                        Tag <code>&lt;body&gt;</code> merupakan tag pembuka dari badan dokumen HTML. Semua konten yang
-                        akan ditampilkan di halaman web, seperti teks, gambar, dan link, ditulis di dalam tag ini.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-gray-50 py-12">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-semibold text-gray-800 mb-8">3. Elemen dan Tag Pada Dokumen HTML</h2>
+            <div class="mt-8">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Tag dan Elemen dalam HTML</h3>
+                <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                    Dokumen HTML terdiri dari elemen-elemen yang saling berkaitan untuk membentuk suatu dokumen HTML
+                    yang utuh, antara lain elemen HTML, elemen <code>&lt;head&gt;</code>, dan elemen
+                    <code>&lt;body&gt;</code>. Elemen-elemen ini masing-masing dapat diapit tanda yang disebut
+                    delimeter (<code>&lt;....&gt;</code>).
+                </p>
 
                 <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                    Ciri utama dokumen HTML adalah adanya tag dan elemen. Elemen dalam dokumen HTML dikategorikan
-                    menjadi dua, yaitu elemen <code>&lt;head&gt;</code> yang berfungsi memberikan informasi tentang
-                    dokumen tersebut dan elemen <code>&lt;body&gt;</code> yang menentukan bagaimana isi suatu dokumen
-                    ditampilkan oleh browser, seperti paragraf, daftar (list), tabel, dan lain-lain.
+                    Elemen yang telah diapit dengan tanda delimeter disebut dengan tag. Berikut adalah contoh
+                    penulisan elemen dalam HTML:
                 </p>
+
+                <div class="bg-gray-100 p-4 rounded-md mb-6">
+                    <p class="text-gray-800 font-semibold text-lg">&lt;nama elemen&gt;</p>
+                    <p class="text-gray-700 text-lg mb-4">Misalnya: <code>&lt;html&gt;</code></p>
+                </div>
 
                 <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                    Sedangkan tag dinyatakan dengan tanda lebih kecil "<code>&lt;</code>" (tag awal) dan tanda lebih
-                    besar "<code>&gt;</code>" (tag akhir). Dalam penggunaannya, sebagian besar kode HTML tersebut harus
-                    terletak di antara tag kontainer. Yaitu diawali dengan <code>&lt;namatag&gt;</code> dan diakhiri
-                    dengan <code>&lt;/namatag&gt;</code> (terdapat tanda garis miring "/").
+                    Perlu diingat juga bahwa pada setiap elemen atau tag harus selalu diakhiri atau ditutup dengan
+                    menuliskan kembali tag dan menambahkan tanda garis miring "/". Berikut adalah cara penulisannya:
                 </p>
 
-                <div class="mt-8">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Bagian Head</h3>
-                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                        Bagian <code>&lt;head&gt;</code> digunakan untuk menyimpan informasi tentang dokumen HTML.
-                        Elemen-elemen dalam bagian <code>&lt;head&gt;</code> tidak langsung ditampilkan pada halaman web
-                        tetapi memberikan informasi penting, seperti judul halaman, metadata, dan link ke sumber daya
-                        lain (misalnya CSS).
-                    </p>
-                </div>
-
-                <div class="mt-8">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Bagian Body</h3>
-                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                        Bagian <code>&lt;body&gt;</code> adalah tempat semua konten yang akan ditampilkan pada halaman
-                        web berada, seperti teks, gambar, video, dan elemen lainnya. Semua elemen yang terlihat oleh
-                        pengguna web akan berada di dalam tag <code>&lt;body&gt;</code>.
-                    </p>
-                </div>
-
-                <div class="mt-8">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Tag dan Elemen dalam HTML</h3>
-                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                        Dokumen HTML terdiri dari elemen-elemen yang saling berkaitan untuk membentuk suatu dokumen HTML
-                        yang utuh, antara lain elemen HTML, elemen <code>&lt;head&gt;</code>, dan elemen
-                        <code>&lt;body&gt;</code>. Elemen-elemen ini masing-masing dapat diapit tanda yang disebut
-                        delimeter (<code>&lt;....&gt;</code>).
-                    </p>
-
-                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                        Elemen yang telah diapit dengan tanda delimeter disebut dengan tag. Berikut adalah contoh
-                        penulisan elemen dalam HTML:
-                    </p>
-
-                    <div class="bg-gray-100 p-4 rounded-md mb-6">
-                        <p class="text-gray-800 font-semibold text-lg">&lt;nama elemen&gt;</p>
-                        <p class="text-gray-700 text-lg mb-4">Misalnya: <code>&lt;html&gt;</code></p>
-                    </div>
-
-                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                        Perlu diingat juga bahwa pada setiap elemen atau tag harus selalu diakhiri atau ditutup dengan
-                        menuliskan kembali tag dan menambahkan tanda garis miring "/". Berikut adalah cara penulisannya:
-                    </p>
-
-                    <div class="bg-gray-100 p-4 rounded-md mb-6">
-                        <p class="text-gray-800 font-semibold text-lg">&lt;/nama elemen&gt;</p>
-                        <p class="text-gray-700 text-lg mb-4">Misalnya: <code>&lt;/html&gt;</code></p>
-                    </div>
+                <div class="bg-gray-100 p-4 rounded-md mb-6">
+                    <p class="text-gray-800 font-semibold text-lg">&lt;/nama elemen&gt;</p>
+                    <p class="text-gray-700 text-lg mb-4">Misalnya: <code>&lt;/html&gt;</code></p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="bg-gray-50 py-12">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">Tag HTML Dasar</h2>
+    <section class="bg-gray-50 py-12">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">Tag HTML Dasar</h2>
 
-                <table class="min-w-full table-auto bg-white border border-gray-800 shadow-md rounded-lg">
-                    <thead class="bg-gray-800">
-                        <tr>
-                            <th
-                                class="px-6 py-4 text-left text-xl font-semibold text-gray-800 border-b border-gray-800">
-                                Tag</th>
-                            <th
-                                class="px-6 py-4 text-left text-xl font-semibold text-gray-800 border-b border-gray-800">
-                                Deskripsi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="border-t border-gray-800">
-                            <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800">
-                                <code>&lt;html&gt;</code></td>
-                            <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800">Mendefinisikan sebuah
-                                dokumen HTML.</td>
-                        </tr>
-                        <tr class="bg-gray-50 border-t border-gray-800">
-                            <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800">
-                                <code>&lt;body&gt;</code></td>
-                            <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800">Mendefinisikan bagian
-                                body dokumen HTML.</td>
-                        </tr>
-                        <tr class="border-t border-gray-800">
-                            <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800">
-                                <code>&lt;h1&gt; &lt;/h6&gt;</code></td>
-                            <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800">Mendefinisikan header 1
-                                sampai 6.</td>
-                        </tr>
-                        <tr class="bg-gray-50 border-t border-gray-800">
-                            <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800"><code>&lt;p&gt;</code>
-                            </td>
-                            <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800">Mendefinisikan
-                                paragraf.</td>
-                        </tr>
-                        <tr class="border-t border-gray-800">
-                            <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800"><code>&lt;br&gt;</code>
-                            </td>
-                            <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800">Menambahkan line break
-                                (spasi baru).</td>
-                        </tr>
-                        <tr class="bg-gray-50 border-t border-gray-800">
-                            <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800"><code>&lt;hr&gt;</code>
-                            </td>
-                            <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800">Membuat garis datar
-                                (horizontal).</td>
-                        </tr>
-                        <tr class="border-t border-gray-800">
-                            <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800">
-                                <code>&lt;!-- --> </code></td>
-                            <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800">Mendefinisikan
-                                komentar.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
+            <table class="min-w-full table-auto bg-white border border-gray-800 shadow-md rounded-lg">
+                <thead class="bg-gray-800">
+                    <tr>
+                        <th class="px-6 py-4 text-left text-xl font-semibold text-gray-800 border-b border-gray-800">
+                            Tag</th>
+                        <th class="px-6 py-4 text-left text-xl font-semibold text-gray-800 border-b border-gray-800">
+                            Deskripsi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-t border-gray-800">
+                        <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800">
+                            <code>&lt;html&gt;</code>
+                        </td>
+                        <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800">Mendefinisikan sebuah
+                            dokumen HTML.</td>
+                    </tr>
+                    <tr class="bg-gray-50 border-t border-gray-800">
+                        <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800">
+                            <code>&lt;body&gt;</code>
+                        </td>
+                        <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800">Mendefinisikan bagian
+                            body dokumen HTML.</td>
+                    </tr>
+                    <tr class="border-t border-gray-800">
+                        <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800">
+                            <code>&lt;h1&gt; &lt;/h6&gt;</code>
+                        </td>
+                        <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800">Mendefinisikan header 1
+                            sampai 6.</td>
+                    </tr>
+                    <tr class="bg-gray-50 border-t border-gray-800">
+                        <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800"><code>&lt;p&gt;</code>
+                        </td>
+                        <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800">Mendefinisikan
+                            paragraf.</td>
+                    </tr>
+                    <tr class="border-t border-gray-800">
+                        <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800"><code>&lt;br&gt;</code>
+                        </td>
+                        <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800">Menambahkan line break
+                            (spasi baru).</td>
+                    </tr>
+                    <tr class="bg-gray-50 border-t border-gray-800">
+                        <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800"><code>&lt;hr&gt;</code>
+                        </td>
+                        <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800">Membuat garis datar
+                            (horizontal).</td>
+                    </tr>
+                    <tr class="border-t border-gray-800">
+                        <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800">
+                            <code>&lt;!-- --> </code>
+                        </td>
+                        <td class="px-6 py-4 text-lg text-gray-700 border-b border-gray-800">Mendefinisikan
+                            komentar.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
 
+    <section class="mt-8">
+        <h2 class="text-xl font-bold mb-4">Membuat Form dengan HTML</h2>
+        <p class="mb-4">
+            Form digunakan untuk mengumpulkan input dari pengguna. Berikut adalah contoh form sederhana:
+        </p>
 
-
-
-
-        <!-- 
-        <section class="mt-8 ">
-            <h2 class="text-xl font-bold mb-4">Tag-tag Dasar HTML</h2>
-            <p class="mb-4">
-                Berikut adalah beberapa tag dasar yang sering digunakan dalam HTML:
-            </p>
-
-            <div class="example  bg-black p-4 rounded-lg">
-                <h3 class="font-bold mb-2 text-gray-100">Contoh Tag HTML:</h3>
-                <pre><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
-&lt;h2&gt;Heading 2&lt;/h2&gt;
-&lt;p&gt;Paragraf&lt;/p&gt;
-&lt;a href="https://example.com"&gt;Link&lt;/a&gt;
-&lt;img src="gambar.jpg" alt="Deskripsi Gambar"&gt;
-&lt;ul&gt;
-    &lt;li&gt;Item 1&lt;/li&gt;
-    &lt;li&gt;Item 2&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-    &lt;li&gt;Item 1&lt;/li&gt;
-    &lt;li&gt;Item 2&lt;/li&gt;
-&lt;/ol&gt;</code></pre>
-            </div>
-        </section> -->
-
-        <section class="mt-8">
-            <h2 class="text-xl font-bold mb-4">Membuat Form dengan HTML</h2>
-            <p class="mb-4">
-                Form digunakan untuk mengumpulkan input dari pengguna. Berikut adalah contoh form sederhana:
-            </p>
-
-            <div class="example">
-                <h3 class="font-bold mb-2">Contoh Form HTML:</h3>
-                <pre><code>&lt;form action="/submit" method="post"&gt;
+        <!-- <div class="example">
+            <h3 class="font-bold mb-2">Contoh Form HTML:</h3>
+            <pre><code>&lt;form action="/submit" method="post"&gt;
     &lt;label for="nama"&gt;Nama:&lt;/label&gt;
     &lt;input type="text" id="nama" name="nama"&gt;&lt;br&gt;&lt;br&gt;
     &lt;label for="email"&gt;Email:&lt;/label&gt;
     &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;&lt;br&gt;
     &lt;input type="submit" value="Submit"&gt;
 &lt;/form&gt;</code></pre>
-            </div>
-        </section>
+        </div> -->
 
-        <section class="mt-8">
-            <h2 class="text-xl font-bold mb-4">Membuat Tabel dengan HTML</h2>
-            <p class="mb-4">
-                Tabel digunakan untuk menampilkan data dalam bentuk baris dan kolom. Berikut adalah contoh tabel
-                sederhana:
-            </p>
+        <div class="example bg-black">
+            <h3 class="font-bold mb-2 text-white">Basic JavaScript Examples:</h3>
+            <pre><code>// Variables and Data Types
+let name = "John";
+const age = 25;
+var isStudent = true;
 
-            <div class="example">
-                <h3 class="font-bold mb-2">Contoh Tabel HTML:</h3>
-                <pre><code>&lt;table border="1"&gt;
-    &lt;tr&gt;
-        &lt;th&gt;Nama&lt;/th&gt;
-        &lt;th&gt;Usia&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;John Doe&lt;/td&gt;
-        &lt;td&gt;30&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Jane Doe&lt;/td&gt;
-        &lt;td&gt;25&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/table&gt;</code></pre>
-            </div>
-        </section>
+// Basic Function
+function greet(name) {
+return "Hello, " + name + "!";
+}
+
+// Modern ES6 Function
+const greetArrow = (name) => {
+return `Hello, ${name}!`;
+};</code></pre>
+        </div>
+
+    </section>
+
+    <section class="mt-8">
+        <h2 class="text-xl font-bold mb-4">Membuat Tabel dengan HTML</h2>
+        <p class="mb-4">
+            Tabel digunakan untuk menampilkan data dalam bentuk baris dan kolom. Berikut adalah contoh tabel
+            sederhana:
+        </p>
+        <!-- 
+
+        <div class="example bg-black p-4 rounded-lg relative">
+            <h3 class="font-bold mb-2 text-gray-100">Struktur Dasar HTML:</h3>
+            <pre><code id="code-example">&lt;!doctype html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Judul Dokumen HTML&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Heading Pertama&lt;/h1&gt;
+            &lt;p&gt;Ini adalah paragraf pertama.&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;</code></pre>
+            <button id="copy-btn" class="absolute top-4 right-4 bg-gray-800 text-white p-2 rounded-md focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h8M8 16h8M8 8h8M3 5h18a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/>
+                </svg>
+            </button>
+        </div> -->
+
+    </section>
+
+    <div class="flex justify-end gap-2">
+
+        <div class="lesson-navigation">
+            <span></span>
+            <a href="./index.html" class="nav-button">Back</a>
+        </div>
 
         <div class="lesson-navigation">
             <span></span>
             <a href="lesson2.html" class="nav-button">Next Lesson →</a>
         </div>
+
     </div>
 
+
     <script src="../../Materi-css/Materi.js"></script>
+
 </body>
 
 </html>
