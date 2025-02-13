@@ -3,66 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MySQL Database Basics - Lesson 1</title>
+    <title>Dasar-Dasar HTML - Modul 1</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../../Materi-css/Materi.css">
 </head>
 <body class="bg-gray-100">
-    <div class="lesson-content">
-        <h1 class="lesson-title">Introduction to MySQL Database</h1>
-        
-        <section>
-            <h2 class="text-xl font-bold mb-4">What is MySQL?</h2>
+    <div class="lesson-content p-8 max-w-4xl mx-auto">
+        <h1 class="lesson-title text-3xl font-bold mb-6">Dasar-Dasar HTML</h1>
+
+        <!-- Section 1: Pengenalan HTML -->
+        <section class="mb-8">
+            <h2 class="text-xl font-bold mb-4">Apa itu HTML?</h2>
             <p class="mb-4">
-                MySQL is an open-source relational database management system. It's one of the most popular databases for web applications, known for its reliability, ease of use, and performance.
+                HTML (HyperText Markup Language) adalah bahasa markup yang digunakan untuk menyusun dokumen-dokumen web. Dokumen HTML disimpan dalam format teks reguler dan mengandung tag-tag yang memberikan instruksi kepada browser untuk menampilkan konten.
             </p>
-
-            <div class="example">
-                <h3 class="font-bold mb-2">Basic MySQL Commands:</h3>
-                <pre><code>-- Create a new database
-CREATE DATABASE my_database;
-
--- Create a table
-CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(50) NOT NULL,
-    email VARCHAR(100) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--- Insert data
-INSERT INTO users (username, email) 
-VALUES ('john_doe', 'john@example.com');</code></pre>
+            <div class="example bg-gray-200 p-4 rounded-lg">
+                <h3 class="font-bold mb-2">Contoh Struktur Dasar HTML:</h3>
+                <pre><code><!doctype html>
+<html>
+<head>
+    <title>Judul Halaman</title>
+</head>
+<body>
+    <p>Ini adalah paragraf dalam HTML.</p>
+</body>
+</html></code></pre>
             </div>
         </section>
 
-        <section class="mt-8">
-            <h2 class="text-xl font-bold mb-4">Connecting to MySQL with PHP</h2>
-            <div class="example">
-                <pre><code>&lt;?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "my_database";
+        <!-- Section 2: Penamaan Dokumen HTML -->
+        <section class="mb-8">
+            <h2 class="text-xl font-bold mb-4">Penamaan Dokumen HTML</h2>
+            <p class="mb-4">
+                Saat menyimpan dokumen HTML, pastikan memberikan ekstensi <code>.html</code>. Contohnya: <code>namafile.html</code>.
+            </p>
+        </section>
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-echo "Connected successfully";
-?&gt;</code></pre>
+        <!-- Section 3: Struktur Dokumen HTML -->
+        <section class="mb-8">
+            <h2 class="text-xl font-bold mb-4">Struktur Dokumen HTML</h2>
+            <p class="mb-4">
+                Dokumen HTML memiliki tiga tag utama: <code><html></code>, <code><head></code>, dan <code><body></code>.
+            </p>
+            <ul class="list-disc pl-6 mb-4">
+                <li><strong><html></strong>: Menyatakan bahwa dokumen adalah dokumen HTML.</li>
+                <li><strong><head></strong>: Berisi informasi tentang dokumen, seperti judul halaman.</li>
+                <li><strong><body></strong>: Berisi konten yang akan ditampilkan di browser.</li>
+            </ul>
+            <div class="example bg-gray-200 p-4 rounded-lg">
+                <h3 class="font-bold mb-2">Contoh Struktur Lengkap:</h3>
+                <pre><code><!doctype html>
+<html>
+<head>
+    <title>Judul Halaman</title>
+</head>
+<body>
+    <h1>Heading Utama</h1>
+    <p>Ini adalah paragraf.</p>
+</body>
+</html></code></pre>
             </div>
         </section>
 
-        <div class="lesson-navigation">
+        <!-- Section 4: Elemen dan Tag pada HTML -->
+        <section class="mb-8">
+            <h2 class="text-xl font-bold mb-4">Elemen dan Tag pada HTML</h2>
+            <p class="mb-4">
+                Elemen dalam HTML terdiri dari dua bagian utama: <strong>Head</strong> untuk informasi dokumen dan <strong>Body</strong> untuk konten yang ditampilkan. Setiap elemen diapit oleh tag pembuka dan penutup.
+            </p>
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr>
+                        <th class="border border-gray-300 p-2">Tag</th>
+                        <th class="border border-gray-300 p-2">Deskripsi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-300 p-2"><html></td>
+                        <td class="border border-gray-300 p-2">Mendefinisikan dokumen HTML.</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-2"><body></td>
+                        <td class="border border-gray-300 p-2">Mendefinisikan bagian body dokumen HTML.</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-2"><h1> sampai <h6></td>
+                        <td class="border border-gray-300 p-2">Mendefinisikan heading dengan level 1 hingga 6.</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-2"><p></td>
+                        <td class="border border-gray-300 p-2">Mendefinisikan paragraf.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Section 5: Link, List, Image, Form, Tabel, dan Div -->
+        <section class="mb-8">
+            <h2 class="text-xl font-bold mb-4">Komponen Lain dalam HTML</h2>
+            <p class="mb-4">
+                HTML mendukung berbagai komponen seperti link, list, gambar, form, tabel, dan div untuk membangun halaman web yang interaktif.
+            </p>
+            <div class="example bg-gray-200 p-4 rounded-lg">
+                <h3 class="font-bold mb-2">Contoh Link:</h3>
+                <pre><code><a href="https://www.contoh.com">Kunjungi Contoh</a></code></pre>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <div class="lesson-navigation flex justify-between mt-8">
             <span></span>
-            <a href="lesson2.html" class="nav-button">Next Lesson →</a>
+            <a href="modul2.html" class="nav-button bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Next Lesson →</a>
         </div>
     </div>
-
     <script src="../../Materi-css/Materi.js"></script>
 </body>
 </html>
