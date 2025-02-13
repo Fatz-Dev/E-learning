@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -8,16 +8,32 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@heroicons/react@1.0.6/outline/index.js"></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../../Materi-css/Materi.css">
 </head>
 
-<body class="">
+<body>
+
+
+
+    <div class="flex items-center">
+        <a href="index.html"
+            class="rounded-xl bg-slate-500 text-center text-gray-100 px-6 py-2.5 text-sm font-semibold text-custom shadow-sm hover:bg-gray-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+            Back
+            <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+    </div>
+
+    <hr class="border-t-2 border-gray-500 my-6 shadow-md">
+
+    <br>
+
 
     <h2 class="lesson-title font-extrabold text-center text-4xl">Dasar-dasar HTML</h2>
 
     <section>
-
         <h2 class="text-3xl font-semibold text-gray-800 mb-4">Tujuan Pembelajaran</h2>
         <ul class="mb-4">
             <li>1. Mahasiswa dapat mengenal dasar-dasar HTML</li>
@@ -64,7 +80,7 @@
             </p>
         </div>
 
-        <div class="example bg-black p-4 rounded-lg relative">
+        <div class="example bg-gray-600 p-4 rounded-lg relative">
             <h3 class="font-bold mb-2 text-gray-100">Struktur Dasar HTML:</h3>
             <pre><code id="code-example">&lt;!doctype html&gt;
         &lt;html&gt;
@@ -255,84 +271,380 @@
         </table>
     </section>
 
+
+    <hr class="border-t-2 border-gray-500 my-6 shadow-md">
+
+
     <section class="mt-8">
-        <h2 class="text-xl font-bold mb-4">Membuat Form dengan HTML</h2>
-        <p class="mb-4">
-            Form digunakan untuk mengumpulkan input dari pengguna. Berikut adalah contoh form sederhana:
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Heading dan Paragraph</h2>
+        <p class="text-base text-gray-700 mb-6">Heading digunakan untuk memberikan penjudulan pada suatu dokumen HTML.
+            Untuk melakukan format heading maka menggunakan tag <code
+                class="bg-gray-400">&lt;h1&gt;....&lt;/h1&gt;</code> untuk judul utama dan untuk judul sub bab dapat
+            menggunakan tag <code class="bg-gray-400">&lt;h2&gt;....&lt;/h2&gt;</code> sampai dengan <code
+                class="bg-gray-400">&lt;h6&gt;....&lt;/h6&gt;</code>. Untuk membuat sebuah paragraph dalam dokumen HTML
+            maka digunakan tag <code class="bg-gray-400">&lt;p&gt;...&lt;/p&gt;</code>.</p>
+
+        <hr class="border-t-2 border-gray-500 my-6 shadow-md">
+
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Link</h2>
+        <p class="text-base text-gray-700 mb-6">Modul Pemrograman Web Link atau biasa disebut dengan anchor (pengait)
+            dapat dibuat dengan menambahkan tag <code class="bg-gray-400">&lt;a&gt;....&lt;/a&gt;</code> serta atribut
+            <code class="bg-gray-400">href</code> agar link tersebut dapat menyimpan alamat web yang akan dituju ketika
+            link diklik. Sehingga sintaks link adalah :
         </p>
+        <pre
+            class="bg-gray-600 p-4 text-gray-800 rounded-md mb-8"><code >&lt;a href=’alamat web yang dituju’&gt;...&lt;/a&gt;</code></pre>
 
-        <!-- <div class="example">
-            <h3 class="font-bold mb-2">Contoh Form HTML:</h3>
-            <pre><code>&lt;form action="/submit" method="post"&gt;
-    &lt;label for="nama"&gt;Nama:&lt;/label&gt;
-    &lt;input type="text" id="nama" name="nama"&gt;&lt;br&gt;&lt;br&gt;
-    &lt;label for="email"&gt;Email:&lt;/label&gt;
-    &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;&lt;br&gt;
-    &lt;input type="submit" value="Submit"&gt;
-&lt;/form&gt;</code></pre>
-        </div> -->
+        <hr class="border-t-2 border-gray-500 my-6 shadow-md">
 
-        <div class="example bg-black">
-            <h3 class="font-bold mb-2 text-white">Basic JavaScript Examples:</h3>
-            <pre><code>// Variables and Data Types
-let name = "John";
-const age = 25;
-var isStudent = true;
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">List</h2>
+        <p class="text-base text-gray-700 mb-6">Dalam dokumen HTML suatu daftar atau list adalah suatu kumpulan item
+            tertentu, daftar item dapat ditulis secara berurutan atau tidak. Jenis list dalam HTML adalah:</p>
+        <ul class="list-disc pl-6 mb-14 text-gray-700">
+            <li class="mb-2">Ordered list: Ordered list dapat dibuat dengan menggunakan tag <code
+                    class="bg-gray-400">&lt;ol&gt;....&lt;/ol&gt;</code> dan untuk setiap listnya menggunakan tag <code
+                    class="bg-gray-400">&lt;li&gt;....&lt;/li&gt;</code>.</li>
+            <li class="mb-2">Unordered list: Unordered list dapat dibuat dengan menggunakan tag <code
+                    class="bg-gray-400">&lt;ul&gt;....&lt;/ul&gt;</code> dan untuk setiap listnya menggunakan tag <code
+                    class="bg-gray-400">&lt;li&gt;....&lt;/li&gt;</code>.</li>
+        </ul>
 
-// Basic Function
-function greet(name) {
-return "Hello, " + name + "!";
-}
 
-// Modern ES6 Function
-const greetArrow = (name) => {
-return `Hello, ${name}!`;
-};</code></pre>
+        <hr class="border-t-2 border-gray-500 my-6 shadow-md">
+
+
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Image</h2>
+        <p class="text-base text-gray-700 mb-6">Dalam dokumen HTML kita dapat memuat dan menampilkan gambar. Untuk
+            memuat gambar menggunakan tag <code class="bg-gray-400">&lt;img&gt;</code> untuk menentukan file gambar maka
+            digunakan atribut <code class="bg-gray-400">src</code>. Sehingga sintaks image adalah :</p>
+        <pre
+            class="bg-gray-600 p-4 text-gray-800 rounded-md mb-16"><code>&lt;img src=’nama file gambar.jpg’&gt;</code></pre>
+
+        <hr class="border-t-2 border-gray-500 my-6 shadow-md">
+
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Form</h2>
+        <p class="text-base text-gray-700 mb-6">Sebuah form dalam dokumen HTML dapat memiliki bermacam kontrol, mulai
+            dari text input, combo box, button, dan lain sebagainya. Pembuatan sebuah form diawali dengan menggunakan
+            tag :</p>
+        <pre class="bg-gray-600 p-4 text-gray-800 rounded-md"><code>&lt;form&gt;....&lt;/form&gt;</code></pre>
+
+        <hr class="border-t-2 border-gray-500 my-6 shadow-md">
+
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Label</h3>
+        <p class="text-base text-gray-700 mb-6">Label digunakan untuk memberikan keterangan pada setiap input yang ada.
+            Sintaks form label adalah :</p>
+        <pre
+            class="bg-gray-600 p-4 text-gray-800 rounded-md"><code>&lt;label for=’nama’&gt;keterangan input&lt;/label&gt;</code></pre>
+
+        <hr class="border-t-2 border-gray-500 my-6 shadow-md">
+
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Text</h3>
+        <p class="text-base text-gray-700 mb-6">Kontrol input ini dapat diisi dengan teks yang memiliki panjang kata
+            terbatas, biasa digunakan dalam form pencarian, nama, dan lainnya. Sintaks form text adalah :</p>
+        <pre class="bg-gray-600 p-4 text-gray-800 rounded-md"><code>&lt;input type=’text’ name=’nama’&gt;</code></pre>
+
+        <hr class="border-t-2 border-gray-500 my-6 shadow-md">
+
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Combobox</h3>
+        <p class="text-base text-gray-700 mb-6">Combobox adalah kontrol yang memiliki pilihan ketika diklik. Sintaks
+            form combobox adalah :</p>
+
+        <div class="example bg-gray-600 p-4 rounded-lg relative">
+            <pre class="p-4 text-gray-800 rounded-md"><code>&lt;select&gt;
+        &lt;option value=”name value 1”&gt;Name 1&lt;/option&gt;
+        &lt;option value=”name value 2”&gt;Name 2&lt;/option&gt;
+        &lt;option value=”name value 3”&gt;Name 3&lt;/option&gt;
+</code><code> &lt;/select&gt;</code></pre>
         </div>
 
-    </section>
+        <!-- Example form -->
+        <hr class="border-t-2 border-gray-500 my-6 shadow-md">
 
-    <section class="mt-8">
-        <h2 class="text-xl font-bold mb-4">Membuat Tabel dengan HTML</h2>
-        <p class="mb-4">
-            Tabel digunakan untuk menampilkan data dalam bentuk baris dan kolom. Berikut adalah contoh tabel
-            sederhana:
+        <form class="mt-6 space-y-4">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Contoh Form (Combobox)</h3>
+            <div>
+                <label for="combobox" class="block text-gray-800 font-semibold mb-2">Pilih Opsi</label>
+                <select id="combobox" name="combobox" class="w-full p-2 border border-gray-300 rounded-md">
+                    <option value="1">Opsi 1</option>
+                    <option value="2">Opsi 2</option>
+                    <option value="3">Opsi 3</option>
+                </select>
+            </div>
+        </form>
+
+        <hr class="border-t-2 border-gray-500 my-6 shadow-md">
+
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Tabel</h2>
+        <p class="text-base text-gray-700 mb-6">Untuk menampilkan data dengan tipe tabel dalam HTML, dapat menggunakan
+            tag:</p>
+        <pre class="bg-gray-600 p-4 text-gray-800 rounded-md mb-8"><code>&lt;table&gt;....&lt;/table&gt;</code></pre>
+
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Tabel</h2>
+        <div class="example bg-gray-600 p-4 rounded-lg relative">
+            <p class="text-base text-gray-100 mb-2">Untuk menampilkan data dengan tipe tabel dalam HTML, dapat
+                menggunakan tag:</p>
+            <pre class="p-4 text-gray-800 rounded-md"><code>&lt;table&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Nama&lt;/th&gt;
+              &lt;th&gt;Usia&lt;/th&gt;
+              &lt;th&gt;Kota&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;John Doe&lt;/td&gt;
+              &lt;td&gt;30&lt;/td&gt;
+              &lt;td&gt;Jakarta&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Jane Smith&lt;/td&gt;
+              &lt;td&gt;25&lt;/td&gt;
+              &lt;td&gt;Bandung&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+        </div>
+
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Contoh</h2>
+        <table class="min-w-full table-auto border-collapse border border-gray-800">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2 border border-gray-800">Nama</th>
+                    <th class="px-4 py-2 border border-gray-800">Usia</th>
+                    <th class="px-4 py-2 border border-gray-800">Kota</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="px-4 py-2 border border-gray-800">John Doe</td>
+                    <td class="px-4 py-2 border border-gray-800">30</td>
+                    <td class="px-4 py-2 border border-gray-800">Jakarta</td>
+                </tr>
+                <tr>
+                    <td class="px-4 py-2 border border-gray-800">Jane Smith</td>
+                    <td class="px-4 py-2 border border-gray-800">25</td>
+                    <td class="px-4 py-2 border border-gray-800">Bandung</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+        <hr class="border-t-2 border-gray-500 my-6 shadow-md">
+
+        <h2 class="text-3xl font-bold mb-4">Penggunaan Tag &lt;div&gt; dalam HTML</h2>
+
+        <p class="text-lg mb-6">
+            Penggunaan tag &lt;div&gt; adalah sebagai container atau pembatas satu struktur HTML dengan struktur
+            lainnya. Dalam struktur HTML terdapat beberapa bagian, antara lain:
         </p>
-        <!-- 
 
-        <div class="example bg-black p-4 rounded-lg relative">
-            <h3 class="font-bold mb-2 text-gray-100">Struktur Dasar HTML:</h3>
-            <pre><code id="code-example">&lt;!doctype html&gt;
-        &lt;html&gt;
-        &lt;head&gt;
-            &lt;title&gt;Judul Dokumen HTML&lt;/title&gt;
-        &lt;/head&gt;
-        &lt;body&gt;
-            &lt;h1&gt;Heading Pertama&lt;/h1&gt;
-            &lt;p&gt;Ini adalah paragraf pertama.&lt;/p&gt;
-        &lt;/body&gt;
-        &lt;/html&gt;</code></pre>
-            <button id="copy-btn" class="absolute top-4 right-4 bg-gray-800 text-white p-2 rounded-md focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h8M8 16h8M8 8h8M3 5h18a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/>
-                </svg>
-            </button>
-        </div> -->
+        <div class="mb-6">
+            <h3 class="text-2xl font-semibold mb-2">a. Header</h3>
+            <p class="text-lg mb-4">
+                Bagian kepala website yang berisi logo, nama, slogan, menu, dan lainnya. Sintaks &lt;div&gt; untuk
+                header adalah:
+            </p>
+            <span class="bg-gray-600 p-4 rounded-md">
+                <code>&lt;div id='header'&gt;......&lt;/div&gt;</code></span>
+        </div>
+
+        <div class="mb-6">
+            <h3 class="text-2xl font-semibold mb-2">b. Content</h3>
+            <p class="text-lg mb-4">
+                Berisi isi website itu sendiri, contoh content berisi postingan terbaru atau informasi lainnya. Sintaks
+                &lt;div&gt; untuk content adalah:
+            </p>
+            <span class="bg-gray-600 p-4 rounded-md">
+                <code>&lt;div id='content'&gt;......&lt;/div&gt;</code></span>
+        </div>
+
+        <div class="mb-6">
+            <h3 class="text-2xl font-semibold mb-2">c. Sidebar</h3>
+            <p class="text-lg mb-4">
+                Berada di samping content dan biasanya berisi iklan, kategori artikel, widget, dan lainnya. Sintaks
+                &lt;div&gt; untuk sidebar adalah:
+            </p>
+            <span class="bg-gray-600 p-4 rounded-md">
+                <code>&lt;div id='sidebar'&gt;......&lt;/div&gt;</code></span>
+        </div>
+
+        <div class="mb-6">
+            <h3 class="text-2xl font-semibold mb-2">d. Footer</h3>
+            <p class="text-lg mb-4">
+                Bagian kaki dari website yang pada umumnya diisi dengan tag website tersebut, misalnya copyright ©2018
+                by me. Sintaks &lt;div&gt; untuk footer adalah:
+            </p>
+            <span class="bg-gray-600 p-4 rounded-md">
+                <code>&lt;div id='footer'&gt;......&lt;/div&gt;</code></span>
+        </div>
+
+        <hr class="border-t-2 border-gray-500 my-6 shadow-md">
+        <br>
+
+        <h2 class="text-3xl font-bold text-center mb-4">KEGIATAN PRAKTIKUM</h2>
+
+        <p class="text-2xl mb-6">
+            1. <strong>Membuat Heading dan Paragraph</strong>
+        </p>
+
+        <p class="text-lg mb-6 pl-7">
+            <span class="font-semibold">Langkah-langkah praktikum</span>
+        </p>
+
+        <ul class="list-inside list-disc pl-5 space-y-2">
+            <li>Buka direktori C > xampp > htdocs, kemudian buat folder dan beri nama “praktikum_web”.</li>
+            <li>Buka editor Notepad++ atau Sublime Text.</li>
+            <li>Modul Pemrograman Web.</li>
+            <li>Buatlah file baru dengan membuka menu file > new atau dengan shortcut <kbd>Ctrl + N</kbd>.</li>
+            <li>Tuliskan coding berikut:</li>
+        </ul>
+
+        <div class="example bg-gray-600 p-4 rounded-lg relative">
+            <pre class="bg-gray-100 p-4 rounded-md my-6">
+<code>&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Praktikum Web&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Selamat Datang di Praktikum Web&lt;/h1&gt;
+        &lt;p&gt;Ini adalah paragraf pertama yang saya buat dalam praktikum web. Saya sedang belajar membuat halaman web menggunakan HTML. Semoga praktikum ini dapat membantu saya memahami dasar-dasar HTML.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code>
+            </pre>
+        </div>
+
+        <ul class="list-inside list-disc space-y-2 text-lg mb-6 pl-7">
+            <li>
+                Simpan kode yang telah dibuat dengan memilih menu <strong>File > Save As...</strong> atau shortcut
+                <kbd>Ctrl + S </kbd>
+            </li>
+
+            <li> Pilih lokasi
+                penyimpanan di folder
+                <code>C > xampp > htdocs > praktikum_web</code>, beri nama file dengan <strong>prak1.html</strong>,
+                dan pilih <strong>Hypertext Markup Language File ( html )</strong> pada <strong>Save as type</strong>,
+                kemudian
+                klik <strong>Save</strong>.
+            </li>
+
+            <li>
+                Buka aplikasi XAMPP, lalu aktifkan <strong>Apache</strong> dan <strong>MySQL</strong> dengan menekan
+                tombol <strong>Start</strong> pada modul Apache dan MySQL.
+            </li>
+        </ul>
+        Buka browser dan ketikkan URL berikut untuk melihat hasil program:
+        <p class="p-4  rounded-md my-6"><span>http://localhost/praktikum_web/prak1.html</span></p>
+
+        <p class="text-lg">
+            Maka pada browser akan muncul hasil sebagai berikut:
+        </p>
+
+        <br>
+        <br>
+
+
+        <h3 class="text-xl font-semibold text-gray-700">2. Praktikum Membuat List</h3>
+        <p class="mt-2 text-gray-600">
+            Salin koding dibawah ini untuk membuat list menggunakan HTML:
+        </p>
+        <div class="example bg-gray-600 p-4 rounded-lg relative">
+            <pre class="bg-gray-200 p-4 rounded-md overflow-x-auto">
+            <code>
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;List&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h3&gt;Membuat Unordered List&lt;/h3&gt;
+&lt;strong&gt;&lt;i&gt;&lt;u&gt;Bahan-bahan Memasak Telur Goreng&lt;/u&gt;&lt;/i&gt;&lt;/strong&gt;
+&lt;ul&gt;
+    &lt;li&gt;Telur 3 butir&lt;/li&gt;
+    &lt;li&gt;Margarin (1 sdm)&lt;/li&gt;
+    &lt;li&gt;Batang Daun bawang&lt;/li&gt;
+    &lt;li&gt;Bawang merah (2 butir)&lt;/li&gt;
+    &lt;li&gt;Cabai merah keriting (2 buah)&lt;/li&gt;
+    &lt;li&gt;Lada 1/4 sdt&lt;/li&gt;
+    &lt;li&gt;Garam 1/4 sdt&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Membuat Ordered List&lt;/h3&gt;
+&lt;strong&gt;&lt;i&gt;&lt;u&gt;Cara Memasak Telor Goreng&lt;/u&gt;&lt;/i&gt;&lt;/strong&gt;
+&lt;ol&gt;
+    &lt;li&gt;Campur semua bahan di atas&lt;/li&gt;
+    &lt;li&gt;Kocok semua bahan hingga merata&lt;/li&gt;
+    &lt;li&gt;Panaskan margarin&lt;/li&gt;
+    &lt;li&gt;Goreng dan dadar hingga kuning keemasan (matang)&lt;/li&gt;
+    &lt;li&gt;Selesai dan masakan dihidangkan&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+        </pre>
+        </div>
+
+        <ul class="list-inside list-disc space-y-2 text-lg mb-6 pl-5">
+            <li>
+                Simpan kode yang telah dibuat dengan memilih menu <strong>File > Save As...</strong> atau shortcut
+                <kbd>Ctrl + S </kbd>
+            </li>
+
+            <li> Pilih lokasi
+                penyimpanan di folder
+                <code>C > xampp > htdocs > praktikum_web</code>, beri nama file dengan <strong>prak2.html</strong>,
+                dan pilih <strong>Hypertext Markup Language File ( html )</strong> pada <strong>Save as type</strong>,
+                kemudian
+                klik <strong>Save</strong>.
+            </li>
+
+            <li>
+                Buka aplikasi XAMPP, lalu aktifkan <strong>Apache</strong> dan <strong>MySQL</strong> dengan menekan
+                tombol <strong>Start</strong> pada modul Apache dan MySQL.
+            </li>
+        </ul>
+
+        <br>
+        <br>
+
+
+        Buka browser dan ketikkan URL berikut untuk melihat hasil program:
+        <span class="p-4 rounded-md my-6"><code>http://localhost/praktikum_web/prak2.html</code></span>
+
+
+
+        <hr class="border-t-2 border-gray-500 my-6 shadow-md">
+
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Tugas Kelompok</h2>
+
+        <div class="bg-white shadow-lg rounded-lg max-w-4xl mx-auto p-6">
+            <h3 class="text-xl font-semibold text-gray-700 mb-4">1. Buatlah tampilan website Anggota Kelompok</h3>
+
+            <ul class="list-disc pl-5 text-gray-700">
+                <li><strong>Header</strong>: Berisikan Nama Kelompok, Gambar/Logo kelompok</li>
+                <li><strong>Konten</strong>: Berisikan NIM, nama anggota (5 orang termasuk anda sendiri), email dan foto
+                    dalam bentuk tabel</li>
+                <li><strong>Link</strong>: Untuk mengakses Sosmed masing-masing anggota</li>
+                <li><strong>Footer</strong>: Berisikan Copyright nama anda</li>
+            </ul>
+        </div>
+
+        <hr class="border-t-2 border-gray-500 my-6 shadow-md">
+
+
+
 
     </section>
 
     <div class="flex justify-end gap-2">
 
+        <span>Hebat kamu sudah belajar dasar html tekan <b class="text-blue-500">selesai</b> untuk belajar materi
+            selanjut</span>
         <div class="lesson-navigation">
-            <span></span>
-            <a href="./index.html" class="nav-button">Back</a>
+            <a href="./index.html" class="nav-button">Selesai</a>
         </div>
-
-        <div class="lesson-navigation">
-            <span></span>
-            <a href="lesson2.html" class="nav-button">Next Lesson →</a>
-        </div>
-
     </div>
 
 
